@@ -13,6 +13,8 @@ const forecast = (latitude, longitude, callback) => {
             callback(undefined, {
                 summary: body.daily.data[0].summary,
                 temperature: body.currently.temperature,
+                temperature_high: body.daily.data[0].temperatureHigh,
+                temperature_low: body.daily.data[0].temperatureLow,
                 chance_precipitation: body.currently.precipProbability
             });
         }

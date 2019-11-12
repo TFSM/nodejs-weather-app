@@ -21,7 +21,8 @@ weatherForm.addEventListener('submit', (event) => {
             }
             paragraph2.textContent = data.forecast.summary + ' It is currently ' +
             data.forecast.temperature + ' degrees C with ' +
-            (100*data.forecast.chance_precipitation) + '% chance of rain.';
+            (100*data.forecast.chance_precipitation) + '% chance of rain. Temperature high is ' + 
+            data.forecast.temperature_high + ', low is ' + data.forecast.temperature_low;
 
             paragraph1.textContent = data.location;
         });
